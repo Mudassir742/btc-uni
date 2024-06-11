@@ -1,0 +1,289 @@
+/* css file */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* mihais scrolling educator names in coursecard in CardHandle */
+/* .scrollable-text {
+  scrollbar-width: thin; /* For Firefox */
+/* scrollbar-color: #888 #ffffff; /* For Firefox */
+/* -ms-overflow-style: none; For Internet Explorer and Edge */
+/* } */
+a .download-content {
+	color: #a79a95;
+}
+a .course-content {
+	color: #a79a95;
+}
+
+.downloadcards-on-resources-page .action-button-pdfs {
+	width: 75%;
+}
+
+.scrollable-element {
+	scrollbar-color: red white;
+}
+.scrollable-text::-webkit-scrollbar {
+	height: 4px;
+	/* For Chrome, Safari, and Opera */
+}
+
+.scrollable-text::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+/* hamzahs components */
+
+@layer components {
+	/* .trailer-video-player-autoplay iframe {
+    @apply !w-1 !rounded !border
+  } */
+	.faq-here {
+		@apply text-18 uppercase  underline text-themecolor-500;
+	}
+	.custom-scrollbar {
+		@apply !overflow-auto scrollbar-thin py-2 scrollbar-thumb-themecolor-500 scrollbar-track-white scrollbar-track-rounded-lg duration-300 scrollbar-thumb-rounded-lg;
+	}
+
+	.overflow-y-auto {
+		@apply scrollbar-thin py-2 scrollbar-thumb-themecolor-100 scrollbar-track-white scrollbar-track-rounded-lg duration-300 scrollbar-thumb-rounded-lg overflow-auto;
+	}
+
+	.overflow-x {
+		@apply scrollbar-thin py-2 scrollbar-thumb-themecolor-100 scrollbar-track-white scrollbar-track-rounded-lg duration-300 scrollbar-thumb-rounded-lg overflow-auto;
+	}
+
+	.overflow-y {
+		@apply scrollbar-thin py-2 scrollbar-thumb-themecolor-100 scrollbar-track-white scrollbar-track-rounded-lg duration-300 scrollbar-thumb-rounded-lg overflow-auto;
+	}
+
+	.overflow-x-auto {
+		@apply scrollbar-thin py-2 scrollbar-thumb-themecolor-50 scrollbar-track-white scrollbar-track-rounded-lg duration-300 scrollbar-thumb-rounded-lg overflow-auto;
+	}
+
+	.boldSub {
+		@apply font-bold;
+	}
+
+	/* Wrapper to make sure all the content aligned perfectly */
+	.wrapper {
+		@apply px-4 mx-auto max-w-screen-2xl;
+	}
+
+	.outlineSelect {
+		@apply !border !border-border !bg-transparent;
+	}
+
+	.paragraph {
+		@apply text-16 font-normal whitespace-pre-line text-themeColor;
+	}
+}
+
+.rdp-vhidden {
+	@apply hidden;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 1440px;
+
+		padding-left: 6%;
+		padding-right: 6%;
+		/* margin-left: auto;
+    margin-right: auto; */
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.slider-container {
+		/* max-width: 1124px; no max width, otherwise desktop category pages look weird */
+
+		padding-left: 6%;
+		/* padding-right: 6%; */
+		/* margin-left: auto;
+    margin-right: auto; */
+	}
+}
+
+@media (max-width: 767px) {
+	.slider-container {
+		padding-left: 16px;
+		/* padding-right: 16px; */
+	}
+}
+
+.grey-line {
+	/* max-width: 363px; */
+	margin-bottom: 32px;
+	height: 1px;
+	background-color: #a79a95;
+	/* also known as grey-400 */
+	margin-top: 8px;
+	display: flex;
+	justify-content: center;
+
+	@media (min-width: 768px) {
+		padding-left: 6%;
+		padding-right: 6%;
+	}
+
+	@media (max-width: 767px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+.fade {
+	position: relative;
+	overflow: hidden;
+}
+
+.fade::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 75%;
+	/* Adjust this value to change where the fade starts */
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 1)
+	);
+	/* Adjust colors to match your background */
+}
+
+.active-navdashboard-tab {
+	background-color: white;
+	border-radius: 50%;
+	width: 40px;
+	/* Adjust the width and height as per your requirement */
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.active-navdashboard-tab svg {
+	fill: black;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-content {
+	max-width: 80%;
+	max-height: 80%;
+}
+
+.overlay-content img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.space-under-category-titles {
+	padding-bottom: 12px;
+}
+
+.med-space {
+	padding-bottom: 32px;
+}
+
+.small-space {
+	padding-bottom: 24px;
+}
+
+.space-between-categories {
+	padding-bottom: 40px;
+}
+
+/* Styles for the closed hamburger icon */
+.hamburger .bar {
+	width: 30px;
+	height: 3px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+/* Added a CSS class for the active backgrounds, based on the themes. this makes it easier to change down the line is we choose a different color */
+.bg-themecolor {
+	background-color: #523d34;
+	/* Use !important to increase specificity */
+	color: white !important;
+}
+
+.themecolor {
+	background-color: #523d34;
+	/* Use !important to increase specificity */
+	color: #523d34;
+	fill: #523d34;
+	border-color: #523d34;
+}
+
+.themecolor .MuiRating-iconFilled {
+	color: inherit;
+	/* Use the inherited color from the .themecolor class */
+}
+
+@media (min-width: 767px) {
+	.mobile {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.desktop {
+		display: none;
+	}
+}
+
+/* Apply full-bleed effect to the overflow container */
+.full-bleed {
+	width: 100vw;
+	/* Take up the entire viewport width */
+	margin-left: 50%;
+	/* Center the container horizontally */
+	transform: translateX(-50%);
+	/* Correct the horizontal centering */
+}
+.overlay-background {
+	background: linear-gradient(
+		180deg,
+		rgba(38, 38, 38, 0.8) 0%,
+		rgba(38, 38, 38, 0) 100%
+	);
+	border: 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0px;
+	vertical-align: baseline;
+	width: 100%;
+}

@@ -1,0 +1,18 @@
+.postContent h1{
+ @apply text-28;   
+}
+.postContent h2{
+ @apply text-24;   
+}
+.postContent h3{
+ @apply text-18;   
+}
+.postContent p{
+ @apply text-16;   
+}
+.postContent ul{
+    @apply list-disc ml-5;
+}
+.postContent ol{
+    @apply list-decimal ml-5;
+}

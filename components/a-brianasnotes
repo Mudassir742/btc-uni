@@ -1,0 +1,200 @@
+// ** briana's notes **
+
+
+
+
+{/* Mobile */}
+<div className='md:hidden'>
+  </div>
+
+
+  {/* Desktop */}
+<div className='hidden md:block'>
+  </div>
+
+  
+
+  
+w-[376px] = width
+h-[376px] =heighth
+
+<div className='space-between-categories'/>
+40px
+
+<div className="med-space"/> 
+32px
+
+<div className="small-space"/> 
+24px
+
+<div className="space-under-category-titles"/> 
+12px
+
+scrollbar-none = hide a scroll bar but still have an overflow
+
+py =top/bottom
+px =right/left
+
+items-center = center vertically
+
+const amountOfCoursesCompleted = 19;   
+const firstName = 'Briana'; 
+
+
+<main className="px-[16px]">
+
+
+    https://mui.com/material-ui/react-rating/ :
+you simply insert a component from their list and style it as u wish;
+-in my case i did import Rating from "@mui/material/Rating"; 
+and then just used it like <Rating name="half-rating-read" defaultValue={averageRating} precision={0.5} readOnly />
+
+
+to disable a link:
+<HalfButtonIconLeft
+link="javascript:void(0)"
+text="BILLING HISTORY"
+textColor="black"
+borderColor="black"
+backgroundColor="white"          
+/>
+
+
+HalfButtonIconLeftProps
+link="javascript:void(0)"
+
+<!-- max width:
+<div style={{ maxWidth: `${imageWidth}px` }}>
+</div> -->
+
+
+mr-auto = put the extra space on the right
+ml-auto = put the extra space on the left
+
+
+make an image a perfect circle:
+<div className="justify-center items-center p-2" style={{ width: imageWidth, height: imageWidth }}>
+  <div className="rounded-full overflow-hidden w-full h-full">
+    <Image
+      src={educatorData.educatorMetaData.educatorpicture?.mediaItemUrl || "https://cms.btcuniversity.com/wp-content/uploads/2023/05/Ellipse-25.png"}
+      alt="Educator Image"
+      width={imageWidth}
+      height={imageWidth} // Set height to be the same as width for a perfect circle
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
+
+
+
+object cover if you want it to zoom in to fit the container (like a square container but it is a rectangle image). it won't show the whole image. 
+    <Image
+          src={imageURL || '/placeholder.png'}
+          alt="Image"
+          width={148}
+          height={148}
+          className="w-[148px] h-[148px] object-cover"
+        />
+
+
+object-contian if you want the whole image to show and not to be destorted in the container. 
+     <Image
+                  src={mediaItemUrl}
+                  alt="Course Detail"
+                  width={desktopImageWidth}
+                  height={desktopImageWidth}
+                  className="max-h-[18.75rem] object-contain"
+                />      
+
+
+
+<SH1Text
+     text="RECOMMENDED EDUCATORS"
+     className="text-themeColor" // add !text-themeColor if it does not work `! = !important in css`
+/> 
+ <main className=" bg-themecolor-50">
+
+<SH1Text
+     text="RECOMMENDED EDUCATORS"
+     className="text-themeColor"
+/> 
+  <div className='mx-6 md:mx-[12.5%] w-full'>     
+
+  briana's notes
+ 
+  <div className="container">
+
+
+  jen's lines:  <div className="grey-line"/>
+
+  to make right chevrons on the far right of the div:    <div className='w-full py-[18px] px-4 flex-col space-y-4'>
+
+
+  put things ont he right: <div className="ml-auto place-items-end items-center"> or <div className='flex flex-grow justify-end'>
+
+
+
+  <Link href={courseSlug}>
+<Button >Course Details</Button>
+</Link>
+
+   <Link href="/bulk-subscription">
+<Button variant="secondary" >Purchase</Button>
+</Link>
+
+issue with things getting smaller when you add multiples?     <div className='' style={{ minWidth: '100px', minHeight: '100px', flexShrink: 0 }}>
+
+
+z-index:
+
+-header-is sticky
+
+-backbuttons-10
+-youtube completed overlay-2
+-subscribe call out-20
+
+-youtube completed checkmark overlay-3
+
+-full page overlays-30 +
+-exitflow-30 
+
+
+-XCircle-close -40 
+-stciky course card video (mobile)-4
+
+-hamburger when open (i.e. sheet) 40
+
+
+
+tructate text
+SEE TEXT: EducatorsName for correct way! get rid of     display: "-webkit-box",
+
+ what i did to border the cancel flow:
+    <div className=" border-[1px] border-border rounded-xl md:border-white">
+    
+
+
+    full width iframe:
+
+      <div className="relative">
+      <div className="!w-full relative pb-[56.25%] h-0 overflow-hidden ">
+        <iframe
+         src={`https://player.vimeo.com/video/843945473?autoplay=1`}
+          className="!w-full !h-full !absolute !top-0 !left-0 rounded-xl"
+        />
+      </div>
+      </div>
+
+
+
+
+fullimage: fill={true}
+
+
+test
+
+
+              <DialogContent className="max-h-[500px] overflow-y-scroll scrollbar-thin custom-scrollbar">
+
+the correct set up for a button/link duo:
+     <Link href={'/subscribe'}>  <Button className='subscribe-button-click-header'  >  Subscribe</Button>    </Link>
